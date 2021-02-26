@@ -1,0 +1,22 @@
+<div style="display: flex; justify-content: space-between;">
+    <div>
+      <input [(ngModel)]="nombreSeccion" type="text">
+      <button (click)="onSaveSeccion()">Guardar</button>
+    </div>
+    <div>
+      <select [(ngModel)]="idSeccion">
+        <option value="0">Selecciona una opción</option>
+        <option *ngFor="let seccion of Secciones" value="{{seccion.seccion_id}}">{{seccion.name}}</option>
+      </select>
+      <input [(ngModel)]="nombreProducto" placeholder="nombre" type="text">
+      <input [(ngModel)]="publicado" type="checkbox">
+      <input [(ngModel)]="destacado" type="checkbox">
+      <input [(ngModel)]="descripcion" placeholder="descripcion" type="text">
+      <input [(ngModel)]="precio" placeholder="precio" type="number">
+      <input [(ngModel)]="imagen1" placeholder="imagen" type="text">
+      <button (click)="onSaveProducto()">Guardar</button>
+    </div>
+  </div>
+  
+  <!-- //-------------------------------------------------------------------------------------------------------------------------- -->
+  

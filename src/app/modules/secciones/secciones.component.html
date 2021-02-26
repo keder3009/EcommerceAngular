@@ -1,0 +1,19 @@
+<div>
+  <ul>
+    <li><h2 (click)="filtrarProductosSeccion(1)">Todos</h2></li>
+    <li *ngFor="let seccion of Secciones ">
+      <div (click)="filtrarProductosSeccion(seccion.seccion_id)">
+        <h2>{{seccion.name}}</h2>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <!-- [routerLink]="['/productos', SNegocio.seccion_id]" -->
+  <div *ngFor="let producto of Productos ">
+    <div style="height: 200px; width: 200px; background-repeat: no-repeat; background-size : cover;" [style.backgroundImage]="'url('+ producto.imagen1 +')'">
+      {{producto.nombre}}
+    </div>
+  </div>
+</div>
